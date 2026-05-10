@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class = "formgroup">
+            <div class = "Opening">
+                <div class = "Isiopening">
+                    <H2>Form</H2>
+                    <h3>Deskripsi</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <form id = "Identitas">
+                <h3>Identitas</h3>
+                <p>Silahkan jawab sesuai dengan keterangan yang ada</p>
+                <div id = "form1">
+                    <label id = "Labelnama">Nama</label>
+                    <input type = "text" placeholder="John doe" required>
+                </div>
+                <div id = "form2">
+                    <label id = "Labelumur">Umur</label>
+                    <input type = "number" placeholder="1-100" min = "1" max = "100" required>
+                </div>
+                <div id = "form3">
+                    <label id = "Labelemail">Email</label>
+                    <input type = "email" placeholder="alamat@gmail.com" required>
+                </div>
+                <div id = "form4">
+                    <label id = "LabelJurusan">Jurusan</label>
+                    <select id = "Jurusan" name = "Jurusan">
+                        <option value="">Pilihan</option>
+                        <option value="SI">Sistem Informasi</option>
+                        <option value="IF">Teknik Informatika</option>
+                        <option value="DKV">Desain Komunikasi VIsual</option>
+                        <option value="BC">Business Creation</option>
+                    </select>
+                </div>
+            </form>
+            <button id = "Submitbutton">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
