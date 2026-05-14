@@ -7,6 +7,7 @@ const selectJurusan = document.getElementById('jurusan');
 const validation_nama = nama.value.trim(); //ngilangin spasi
 const validation_phonenumber = phonenumber.value.trim();
 const regexhp = /^(\+62|0|62)\d{9,12}$/;
+const regexemail = /[\w._]+@[a-z._].+\.[a-z]+/;
 if(nama.length < 3){
     alert("Nama terlalu pendek");
     return;
@@ -16,7 +17,12 @@ if(/\d/.test(nama)){
     return;
 }
 
-if(regex.test(nama)){
+if(regexhp.test(phonenumber)){
     alert("Nomor telfon harus minimal 11 digit atau maksimal 13 digit");
+    return;
+}
+
+if(regexemail.test(email)){
+    alert("Format email salah");
     return;
 }
