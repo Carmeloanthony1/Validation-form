@@ -4,7 +4,9 @@ const phonenumber = document.querySelector('input[name="kontak"]');
 const email = document.querySelector('input[name="email"]');
 const selectJurusan = document.getElementById('jurusan'); 
 
-form.addEventListener('submit', (e) => {
+//logika untuk button 
+const button = document.getElementById("Submitbutton");
+button.addEventListener('click', (e)=>{
     const validation_nama = nama.value.trim(); //ngilangin spasi
     const validation_phonenumber = phonenumber.value.trim();
     const validation_email = email.value.trim();
@@ -32,6 +34,7 @@ form.addEventListener('submit', (e) => {
         e.preventDefault();
         return;
     }
-
+    form.reset();
     alert("Berhasil di submit!");
-}); 
+    window.location.href = "form.html";
+});
