@@ -1,14 +1,19 @@
 const prev = document.getElementById("prevbutton");
 const next = document.getElementById("nextbutton");
 const submit = document.getElementById("submitbutton");
+const modal = document.querySelector('.modal');
+const isimodal = document.querySelector('.isimodal');
+const close = document.querySelector('.close');
+
+//kosongkan
+const kosongkan = document.querySelector('span');
+const textarea = document.getElementById('jawabanujian');
 
 //element
 const indexsoal = document.querySelector('.headersoal h4');
 const gambarsoal = document.querySelector('#Dokumentasisoal img')
 const soal = document.querySelector('.question h2');
-const modal = document.querySelector('.modal');
-const isimodal = document.querySelector('.isimodal');
-const close = document.querySelector('.close');
+
 let currentsoal = 0;
 const daftarsoal = [
     {
@@ -38,6 +43,12 @@ function tampilkansoal(){
     indexsoal.textContent = soalaktif.index;
     gambarsoal.src = soalaktif.gambarsoal
     soal.textContent = soalaktif.pertanyaan
+
+    if(currentsoal === daftarsoal.length - 1){
+        submit.style.display ='flex';
+    } else {
+        submit.style.display ='none';
+    }
 }
 prev.addEventListener('click', (e) => {
     e.preventDefault();
@@ -59,6 +70,7 @@ gambarsoal.addEventListener('click', (e)=>{
     e.preventDefault();
     modal.style.display = 'flex';
     isimodal.src = gambarsoal.src;
+    
 });
 
 close.addEventListener('click', () =>{
@@ -72,8 +84,14 @@ modal.addEventListener('click', (e) =>{
     
 });
 
-//submit
-//next
+submit.addEventListener('click', (e) => {
+    alert("Jawaban sudah tersubmit");
+});
+
+kosongkan.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    textarea.value = "";
+});
 //kosongkan jawaban
-//modal
 tampilkansoal();

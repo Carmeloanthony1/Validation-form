@@ -80,10 +80,15 @@ textarea {
     width: 100px;
     padding: 12px;
     border-radius: 15px;
+    margin-top: 40px;
     border: 2px solid black;
     background-color: #8ea9c4;
     color: black;
     font-weight: bold;
+}
+
+#submitbutton {
+    display: none;
 }
 
 .modal{
@@ -118,4 +123,14 @@ textarea {
     font-weight: bold;
     cursor: pointer;
     z-index: 1001;
+    cursor: pointer;
+}
+
+span {
+    cursor:pointer;
+    display: block;
+    justify-content: center;
+    align-items: end;
+    margin-top: 35px;
+    font-size: 20px;
 }
