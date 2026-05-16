@@ -89,7 +89,6 @@ textarea {
 .modal{
     display:none;
     position: fixed;
-    pointer-events: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -118,4 +117,5 @@ textarea {
     font-size: 35px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 1001;
 }

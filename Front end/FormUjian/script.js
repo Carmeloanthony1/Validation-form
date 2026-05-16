@@ -6,7 +6,9 @@ const submit = document.getElementById("submitbutton");
 const indexsoal = document.querySelector('.headersoal h4');
 const gambarsoal = document.querySelector('#Dokumentasisoal img')
 const soal = document.querySelector('.question h2');
-
+const modal = document.querySelector('.modal');
+const isimodal = document.querySelector('.isimodal');
+const close = document.querySelector('.close');
 let currentsoal = 0;
 const daftarsoal = [
     {
@@ -21,7 +23,7 @@ const daftarsoal = [
     },
     {
         index: "Index soal 3",
-        gambarsoal: "/FormUjian/Asset/gtm.jpg",
+        gambarsoal: "/FormUjian/Asset/gtm.png",
         pertanyaan: "Soal 3: Who is one of your best friends, and what do you love about them?"
     },
     {
@@ -30,6 +32,7 @@ const daftarsoal = [
         pertanyaan: "Soal 4: What's something you wish you'd figured out sooner?"
     }
 ];
+
 function tampilkansoal(){
     const soalaktif = daftarsoal[currentsoal];
     indexsoal.textContent = soalaktif.index;
@@ -51,7 +54,26 @@ next.addEventListener('click', (e) => {
         tampilkansoal();
     }
 });
+
+gambarsoal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.style.display = 'flex';
+    isimodal.src = gambarsoal.src;
+});
+
+close.addEventListener('click', () =>{
+    modal.style.display = 'none';
+});
+
+modal.addEventListener('click', (e) =>{
+    if(e.target === modal){
+        modal.style.display = 'none';
+    }
+    
+});
+
 //submit
 //next
 //kosongkan jawaban
 //modal
+tampilkansoal();
